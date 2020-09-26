@@ -28,6 +28,7 @@ class RingBufferTests(unittest.TestCase):
         self.buffer.append('d')
         self.buffer.append('e')
         self.buffer.append('f')
+        print('data', self.buffer.data)
         self.assertEqual(self.buffer.get(), ['f', 'b', 'c', 'd', 'e'])
 
     def test_adding_many_elements_to_full_buffer(self):
